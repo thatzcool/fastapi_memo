@@ -53,7 +53,7 @@ async def read_root(request: Request):
     # ===== TODO: 이 부분을 완성하세요 (위 설명의 순서를 따라가세요) =====
     today = date.today().strftime("%Y년 %m월 %d일")
     return templates.TemplateResponse(request, "home.html", {"app_name":"마이 메모 앱", "today": today})
-
+s
 
 # ---------------------------------------------------------------
 # [STEP 3] 경로 매개변수 + 쿼리 매개변수

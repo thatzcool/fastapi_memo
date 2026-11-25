@@ -57,8 +57,11 @@ Base = declarative_base()
 class Memo(Base):
     __tablename__ = "memo"
     # ===== TODO: 이 부분을 완성하세요 (위 설명의 순서를 따라가세요) =====
-    id = Column(Integer, primary_key=True, index=True)
     # TODO: title(String 100), content(String 1000) 컬럼을 추가하세요
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String(100))
+    content = Column(String(1000))
+    
 
 
 # ---------------------------------------------------------------
@@ -71,12 +74,17 @@ class Memo(Base):
 # ---------------------------------------------------------------
 class MemoCreate(BaseModel):
     # ===== TODO: 이 부분을 완성하세요 (위 설명의 순서를 따라가세요) =====
-    pass  # TODO: title: str, content: str
+    # TODO: title: str, content: str
+    title: str
+    content: str
+
 
 
 class MemoUpdate(BaseModel):
     # ===== TODO: 이 부분을 완성하세요 (위 설명의 순서를 따라가세요) =====
-    pass  # TODO: title: str | None = None, content: str | None = None
+    # TODO: title: str | None = None, content: str | None = None
+    title: str | None = None
+    content: str | None = None
 
 
 class MemoOut(BaseModel):
